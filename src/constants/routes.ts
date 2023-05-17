@@ -1,10 +1,11 @@
-const externalRoutes = {
-  twitter: 'https://twitter.com/',
-}
-
 const routes = {
   index: '/',
-  about: '/about',
 }
 
-export { externalRoutes, routes }
+const apiRoutes = {
+  fetchProducts: 'https://dummyjson.com/products',
+  fetchProductDetail: (productId: number) =>
+    'https://dummyjson.com/products/' + productId,
+}
+
+export { routes, apiRoutes }

@@ -10,10 +10,7 @@ import * as S from './styled'
 const Header: React.FC = () => {
   const router = useRouter()
 
-  const links = [
-    { href: routes.index, text: 'Home' },
-    { href: routes.about, text: 'About' },
-  ]
+  const links = [{ href: routes.index, text: 'Home' }]
 
   return (
     <S.Header>
