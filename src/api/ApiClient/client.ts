@@ -1,5 +1,8 @@
 import axios, { AxiosInstance } from 'axios'
+
 import { apiRoutes } from 'src/constants/routes'
+import { LIMIT_PER_PAGE } from 'src/constants/config'
+
 import { IProductList, IProduct } from './interface'
 
 class ApiClient {
@@ -25,9 +28,10 @@ class ApiClient {
     this.axiosApi = axiosApi
   }
 
-  fetchProducts = async (): Promise<IProductList> => {
+  fetchProducts = async (skip: number): Promise<IProductList> => {
     const response = await this.axiosApi.get<IProductList>(
-      apiRoutes.fetchProducts
+      apiRoutes.fetchProducts,
+      { params: { limit: LIMIT_PER_PAGE, skip } }
     )
 
     return response?.data

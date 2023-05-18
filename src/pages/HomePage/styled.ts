@@ -25,3 +25,14 @@ export const TableWrapper = styled.div`
     background-color: #efefef;
   }
 `
+
+export const PaginationWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  padding-top: 12px;
+  padding-bottom: 25px;
+
+  ul.MuiPagination-ul li button {
+    font-size: 16px;
+  }
+`

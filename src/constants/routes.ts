@@ -1,5 +1,6 @@
 const routes = {
   index: '/',
+  productDetail: (id: number) => '/product-detail/' + id,
 }
 
 const apiRoutes = {
